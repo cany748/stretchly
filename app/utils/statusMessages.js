@@ -4,7 +4,6 @@ const Utils = require('./utils')
 class StatusMessages {
   constructor ({ breakPlanner, settings }) {
     this.reference = breakPlanner.scheduler.reference
-    this.doNotDisturb = breakPlanner.dndManager.isOnDnd
     this.appExclusionPause = breakPlanner.appExclusionsManager.isSchedulerCleared
     this.timeLeft = breakPlanner.scheduler.timeLeft
     this.isPaused = breakPlanner.isPaused
@@ -29,11 +28,6 @@ class StatusMessages {
           i18next.t('statusMessages.indefinitely')
         return message
       }
-    }
-
-    if (this.doNotDisturb) {
-      message += i18next.t('statusMessages.paused') + ' - ' + i18next.t('statusMessages.dndMode')
-      return message
     }
 
     if (this.appExclusionPause) {

@@ -1,7 +1,6 @@
 const Scheduler = require('./utils/scheduler')
 const EventEmitter = require('events')
 const NaturalBreaksManager = require('./utils/naturalBreaksManager')
-const DndManager = require('./utils/dndManager')
 const AppExclusionsManager = require('./utils/appExclusionsManager')
 const log = require('electron-log/main')
 
@@ -14,7 +13,6 @@ class BreaksPlanner extends EventEmitter {
     this.scheduler = null
     this.isPaused = false
     this.naturalBreaksManager = new NaturalBreaksManager(settings)
-    this.dndManager = new DndManager(settings)
     this.appExclusionsManager = new AppExclusionsManager(settings)
 
     this.on('microbreakStarted', (shouldPlaySound) => {
@@ -37,27 +35,9 @@ class BreaksPlanner extends EventEmitter {
     })
 
     this.naturalBreaksManager.on('naturalBreakFinished', () => {
-      if (!this.isPaused && this.scheduler.reference !== 'finishMicrobreak' && this.scheduler.reference !== 'finishBreak' && !this.dndManager.isOnDnd) {
-        this.reset()
-        log.info('Stretchly: resuming breaks after idle time')
-        this.emit('updateToolTip')
-      }
-    })
-
-    this.dndManager.on('dndStarted', () => {
-      if (!this.isPaused && this.scheduler.reference !== 'finishMicrobreak' && this.scheduler.reference !== 'finishBreak' && this.scheduler.reference !== null) {
-        this.clear()
-        log.info('Stretchly: pausing breaks for Do Not Distrub')
-        this.emit('updateToolTip')
-      } else {
-        this.dndManager.isOnDnd = false
-      }
-    })
-
-    this.dndManager.on('dndFinished', () => {
       if (!this.isPaused && this.scheduler.reference !== 'finishMicrobreak' && this.scheduler.reference !== 'finishBreak') {
         this.reset()
-        log.info('Stretchly: resuming breaks for Do Not Distrub')
+        log.info('Stretchly: resuming breaks after idle time')
         this.emit('updateToolTip')
       }
     })
@@ -257,17 +237,6 @@ class BreaksPlanner extends EventEmitter {
       this.naturalBreaksManager.start()
     } else {
       this.naturalBreaksManager.stop()
-    }
-  }
-
-  doNotDisturb (shouldUse) {
-    if (shouldUse) {
-      this.dndManager.start()
-    } else {
-      this.dndManager.stop()
-      if (!this.isPaused && this.scheduler.reference === null) {
-        this.reset()
-      }
     }
   }
 }

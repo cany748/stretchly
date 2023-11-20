@@ -80,8 +80,7 @@
         "pacman",
         "tar.xz",
         "apk"
-      ],
-      "asarUnpack": "node_modules/macos-notification-state/**"
+      ]
     },
     "appx": {
       "identityName": "33881JanHovancik.stretchly",
@@ -95,11 +94,6 @@
         "nsis",
         "7z",
         "appx"
-      ],
-      "asarUnpack": [
-        "node_modules/windows-quiet-hours/**",
-        "node_modules/windows-notification-state/**",
-        "node_modules/macos-notification-state/**"
       ]
     },
     "nsis": {
@@ -132,13 +126,10 @@
     "i18next": "^23.7.6",
     "i18next-fs-backend": "^2.3.0",
     "luxon": "^3.4.4",
-    "macos-notification-state": "^3.0.0",
     "meeussunmoon": "^3.0.3",
     "ps-list": "7.2.0",
     "rtl-detect": "^1.1.2",
-    "semver": "^7.5.4",
-    "windows-focus-assist": "^1.3.0",
-    "windows-quiet-hours": "^2.0.0"
+    "semver": "^7.5.4"
   },
   "eslintConfig": {
     "extends": "@cany748"

@@ -218,7 +218,6 @@ function initialize (isAppStart = true) {
   } else {
     breakPlanner.clear()
     breakPlanner.appExclusionsManager.reinitialize(settings)
-    breakPlanner.doNotDisturb(settings.get('monitorDnd'))
     breakPlanner.naturalBreaks(settings.get('naturalBreaks'))
     breakPlanner.nextBreak()
   }
@@ -351,7 +350,7 @@ i18next.on('languageChanged', function (lng) {
 function onSuspendOrLock () {
   log.info('System: suspend or lock')
   if (settings.get('pauseForSuspendOrLock')) {
-    if (breakPlanner.isPaused || breakPlanner.dndManager.isOnDnd ||
+    if (breakPlanner.isPaused ||
       breakPlanner.naturalBreaksManager.isSchedulerCleared ||
       breakPlanner.appExclusionsManager.isSchedulerCleared) {
       log.info('Stretchly: not pausing for suspendOrLock because paused already')
@@ -520,7 +519,6 @@ function trayIconPath () {
   const params = {
     paused:
       breakPlanner.isPaused ||
-      breakPlanner.dndManager.isOnDnd ||
       breakPlanner.naturalBreaksManager.isSchedulerCleared ||
       breakPlanner.appExclusionsManager.isSchedulerCleared,
     monochrome: settings.get('useMonochromeTrayIcon'),
@@ -1123,15 +1121,12 @@ function pauseBreaks (milliseconds) {
 }
 
 function resumeBreaks (notify = true) {
-  if (breakPlanner.dndManager.isOnDnd) {
-    log.info('Stretchly: not resuming breaks because in Do Not Disturb')
-  } else {
-    breakPlanner.resume()
-    log.info('Stretchly: resuming breaks')
-    if (notify) {
-      showNotification(i18next.t('main.resumingBreaks'))
-    }
+  breakPlanner.resume()
+  log.info('Stretchly: resuming breaks')
+  if (notify) {
+    showNotification(i18next.t('main.resumingBreaks'))
   }
+
   updateTray()
 }
 
@@ -1246,7 +1241,7 @@ function getTrayMenuTemplate () {
     })
   }
 
-  if (!(breakPlanner.isPaused || breakPlanner.dndManager.isOnDnd || breakPlanner.appExclusionsManager.isSchedulerCleared)) {
+  if (!(breakPlanner.isPaused || breakPlanner.appExclusionsManager.isSchedulerCleared)) {
     let submenu = []
     if (settings.get('microbreak')) {
       submenu = submenu.concat([{
@@ -1280,7 +1275,7 @@ function getTrayMenuTemplate () {
     // nothing
   } else if (breakPlanner.scheduler.reference === 'finishBreak' && settings.get('breakStrictMode')) {
     // nothing
-  } else if (!(breakPlanner.dndManager.isOnDnd || breakPlanner.appExclusionsManager.isSchedulerCleared)) {
+  } else if (!(breakPlanner.appExclusionsManager.isSchedulerCleared)) {
     trayMenu.push({
       label: i18next.t('main.pause'),
       submenu: [
@@ -1404,10 +1399,6 @@ ipcMain.on('save-setting', function (event, key, value) {
     breakPlanner.naturalBreaks(value)
   }
 
-  if (key === 'monitorDnd') {
-    breakPlanner.doNotDisturb(value)
-  }
-
   if (key === 'language') {
     i18next.changeLanguage(value)
   }
@@ -1492,11 +1483,10 @@ ipcMain.on('show-debug', function (event) {
   const timeleft = Utils.formatTimeRemaining(breakPlanner.scheduler.timeLeft, settings.get('language'))
   const breaknumber = breakPlanner.breakNumber
   const postponesnumber = breakPlanner.postponesNumber
-  const doNotDisturb = breakPlanner.dndManager.isOnDnd
   const settingsFile = settings.path
   const logsFile = log.transports.file.getFile().path
   event.sender.send('debugInfo', reference, timeleft,
-    breaknumber, postponesnumber, settingsFile, logsFile, doNotDisturb)
+    breaknumber, postponesnumber, settingsFile, logsFile)
 })
 
 ipcMain.on('open-preferences', function (event) {
