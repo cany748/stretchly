@@ -38,51 +38,6 @@
   "build": {
     "appId": "net.hovancik.stretchly",
     "productName": "Stretchly",
-    "dmg": {
-      "icon": "build/icon.icns",
-      "iconSize": 128,
-      "contents": [
-        {
-          "x": 355,
-          "y": 125,
-          "type": "link",
-          "path": "/Applications"
-        },
-        {
-          "x": 155,
-          "y": 125,
-          "type": "file"
-        }
-      ]
-    },
-    "mac": {
-      "category": "public.app-category.healthcare-fitness",
-      "target": [
-        {
-          "target": "dmg",
-          "arch": [
-            "x64",
-            "arm64"
-          ]
-        }
-      ],
-      "extendInfo": {
-        "LSBackgroundOnly": 1,
-        "LSUIElement": 1
-      }
-    },
-    "linux": {
-      "category": "Utility",
-      "target": [
-        "AppImage",
-        "deb",
-        "rpm",
-        "freebsd",
-        "pacman",
-        "tar.xz",
-        "apk"
-      ]
-    },
     "appx": {
       "identityName": "33881JanHovancik.stretchly",
       "publisher": "CN=35004EDA-CCDD-4304-A014-784D754E043F",
