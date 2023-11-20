@@ -17,8 +17,7 @@
     "tdd": "mocha --watch test",
     "lint": "eslint . --fix",
     "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable",
-    "prepare": "husky install"
+    "postpublish": "pinst --enable"
   },
   "repository": {
     "type": "git",
@@ -118,7 +117,6 @@
     "cross-env": "^7.0.3",
     "electron": "^27.1.0",
     "electron-builder": "^24.6.4",
-    "husky": "^8.0.3",
     "mocha": "^10.2.0",
     "rimraf": "^5.0.5",
     "sinon": "^17.0.1",
