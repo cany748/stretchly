@@ -8,7 +8,7 @@ body > div > :last-child {
   box-shadow: var(--box-shadow);
   display: grid;
   grid-gap: 16px;
-  grid-template: 56px/ minmax(57px, min-content) minmax(57px, min-content) minmax(57px, min-content) minmax(57px, min-content) auto;
+  grid-template: 56px / minmax(57px, min-content) minmax(57px, min-content) minmax(57px, min-content) minmax(57px, min-content) auto;
   padding: 0 16px;
   position: fixed;
   width: calc(100% - 16px);
@@ -32,12 +32,12 @@ body > div > :last-child {
 }
 
 .navigation .active {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 4px 4px 0 0;
 }
 
 .navigation a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 .navigation > :nth-child(5) {
@@ -100,8 +100,8 @@ body > .hidden,
   text-align: right;
 }
 
-body[dir=rtl] .schedule > :nth-child(1) {
-  text-align: left
+body[dir="rtl"] .schedule > :nth-child(1) {
+  text-align: left;
 }
 
 .schedule > :nth-child(9) {
@@ -111,8 +111,8 @@ body[dir=rtl] .schedule > :nth-child(1) {
   text-align: right;
 }
 
-body[dir=rtl] .schedule > :nth-child(9) {
-  text-align: left
+body[dir="rtl"] .schedule > :nth-child(9) {
+  text-align: left;
 }
 .schedule > :nth-child(17) {
   grid-column: 1/2;
@@ -121,8 +121,8 @@ body[dir=rtl] .schedule > :nth-child(9) {
   text-align: right;
 }
 
-body[dir=rtl] .schedule > :nth-child(17) {
-  text-align: left
+body[dir="rtl"] .schedule > :nth-child(17) {
+  text-align: left;
 }
 
 .theme {
@@ -146,8 +146,8 @@ body[dir=rtl] .schedule > :nth-child(17) {
   text-align: right;
 }
 
-body[dir=rtl] .theme > :nth-child(1) {
-  text-align: left
+body[dir="rtl"] .theme > :nth-child(1) {
+  text-align: left;
 }
 
 .theme > :nth-child(10) {
@@ -157,8 +157,8 @@ body[dir=rtl] .theme > :nth-child(1) {
   text-align: right;
 }
 
-body[dir=rtl] .theme > :nth-child(10) {
-  text-align: left
+body[dir="rtl"] .theme > :nth-child(10) {
+  text-align: left;
 }
 
 .theme > :nth-child(17) {
@@ -168,8 +168,8 @@ body[dir=rtl] .theme > :nth-child(10) {
   text-align: right;
 }
 
-body[dir=rtl] .theme > :nth-child(17) {
-  text-align: left
+body[dir="rtl"] .theme > :nth-child(17) {
+  text-align: left;
 }
 
 .appearance {
@@ -194,7 +194,7 @@ body[dir=rtl] .theme > :nth-child(17) {
 }
 
 .appearance > #snowWhite + label:before {
-  color: #ffffff
+  color: #ffffff;
 }
 
 .win32 .appearance > input[type="radio"] + label:before {
@@ -217,13 +217,13 @@ body[dir=rtl] .theme > :nth-child(17) {
 }
 
 #graphiteCrystal + label:before {
-  background: #1D1F21;
-  color: #1D1F21;
+  background: #1d1f21;
+  color: #1d1f21;
 }
 
 #coffeeKisses + label:before {
-  background: #A49898;
-  color: #A49898;
+  background: #a49898;
+  color: #a49898;
 }
 
 #morningSwim + label:before {
@@ -241,7 +241,7 @@ body[dir=rtl] .theme > :nth-child(17) {
 .appearance > #graphiteCrystal:checked + label:before,
 .appearance > #coffeeKisses:checked + label:before,
 .appearance > #morningSwim:checked + label:before {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .appearance > #snowWhite:checked + label:before {
@@ -286,26 +286,20 @@ body[dir=rtl] .theme > :nth-child(17) {
 }
 
 .about > :nth-child(1) > div > span {
-  font-family: 'Noto Sans Regular', 'Noto Sans Arabic Regular',
-    'Noto Sans CJK KR Regular',
-    'Noto Sans Devanagari Regular',
-    'Noto Sans Gujarati Regular', 'Noto Sans Gurmukhi Regular',
-    'Noto Sans JP Regular', 'Noto Sans Hebrew Regular';
+  font-family: "Noto Sans Regular", "Noto Sans Arabic Regular", "Noto Sans CJK KR Regular", "Noto Sans Devanagari Regular",
+    "Noto Sans Gujarati Regular", "Noto Sans Gurmukhi Regular", "Noto Sans JP Regular", "Noto Sans Hebrew Regular";
   font-size: 48px;
   padding-left: 12px;
 }
 
-body[dir=rtl] .about > :nth-child(1) > div > span {
+body[dir="rtl"] .about > :nth-child(1) > div > span {
   padding-left: 0;
   padding-right: 12px;
 }
 
 .about > :nth-child(1) > span {
-  font-family: 'Noto Sans Light', 'Noto Sans Arabic Light',
-    'Noto Sans CJK KR Light',
-    'Noto Sans Devanagari Light',
-    'Noto Sans Gujarati Light', 'Noto Sans Gurmukhi Light',
-    'Noto Sans JP Light', 'Noto Sans Hebrew Light';
+  font-family: "Noto Sans Light", "Noto Sans Arabic Light", "Noto Sans CJK KR Light", "Noto Sans Devanagari Light",
+    "Noto Sans Gujarati Light", "Noto Sans Gurmukhi Light", "Noto Sans JP Light", "Noto Sans Hebrew Light";
   font-size: 20px;
   line-height: 30px;
 }
@@ -319,7 +313,7 @@ body[dir=rtl] .about > :nth-child(1) > div > span {
   text-align: left;
 }
 
-body[dir=rtl] .about > :nth-child(4) > div {
+body[dir="rtl"] .about > :nth-child(4) > div {
   padding-left: 0;
   padding-right: 8px;
   text-align: right;
@@ -390,7 +384,7 @@ body[dir=rtl] .about > :nth-child(4) > div {
   text-decoration: none;
 }
 
-body[dir=rtl] .heart > .authenticate > a {
+body[dir="rtl"] .heart > .authenticate > a {
   padding-right: 0;
   padding-left: 20px;
 }

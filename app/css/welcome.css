@@ -37,17 +37,14 @@ body > div > :last-child {
   padding-left: 12px;
 }
 
-body[dir=rtl] .welcome > :nth-child(1) > div > span {
+body[dir="rtl"] .welcome > :nth-child(1) > div > span {
   padding-left: 0;
   padding-right: 12px;
 }
 
 .welcome > :nth-child(1) > span {
-  font-family: 'Noto Sans Light', 'Noto Sans Arabic Light',
-    'Noto Sans CJK KR Light',
-    'Noto Sans Devanagari Light',
-    'Noto Sans Gujarati Light', 'Noto Sans Gurmukhi Light',
-    'Noto Sans JP Light', 'Noto Sans Hebrew Light';
+  font-family: "Noto Sans Light", "Noto Sans Arabic Light", "Noto Sans CJK KR Light", "Noto Sans Devanagari Light",
+    "Noto Sans Gujarati Light", "Noto Sans Gurmukhi Light", "Noto Sans JP Light", "Noto Sans Hebrew Light";
   font-size: 20px;
   line-height: 30px;
 }
@@ -55,7 +52,7 @@ body[dir=rtl] .welcome > :nth-child(1) > div > span {
 .welcome > :nth-child(2) {
   display: grid;
   grid-gap: 10px 20px;
-  grid-template: repeat(5, minmax(86px, min-content))/ repeat(8, 1fr);
+  grid-template: repeat(5, minmax(86px, min-content)) / repeat(8, 1fr);
 }
 
 .welcome > :nth-child(2) > div {
@@ -81,13 +78,13 @@ body[dir=rtl] .welcome > :nth-child(1) > div > span {
   margin-left: auto;
 }
 
-body[dir=rtl] .welcome > :last-child > :last-child {
+body[dir="rtl"] .welcome > :last-child > :last-child {
   margin-left: 0;
   margin-right: auto;
 }
 
 .welcome input[type="radio"] + label:before,
-body[dir=rtl] .welcome input[type="radio"] + label:before {
+body[dir="rtl"] .welcome input[type="radio"] + label:before {
   display: block;
   margin: 0 auto;
 }

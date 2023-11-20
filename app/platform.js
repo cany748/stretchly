@@ -1,4 +1,4 @@
-document.body.classList.add(process.platform)
+document.body.classList.add(process.platform);
 if (process.windowsStore) {
-  document.body.classList.add('store')
+  document.body.classList.add("store");
 }

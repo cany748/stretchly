@@ -1,20 +1,20 @@
-const chai = require('chai')
-const IdeasLoader = require('../app/utils/ideasLoader')
-const Shuffled = require('../app/utils/shuffled')
+const chai = require("chai");
+const IdeasLoader = require("../app/utils/ideasLoader");
+const Shuffled = require("../app/utils/shuffled");
 
-chai.should()
+chai.should();
 
-describe('ideasLoader', function () {
+describe("ideasLoader", function () {
   beforeEach(function () {
     this.ideas = new IdeasLoader([
-      { data: 'a', enabled: true },
-      { data: 'b', enabled: false },
-      { data: 'c', enabled: true }
-    ])
-  })
+      { data: "a", enabled: true },
+      { data: "b", enabled: false },
+      { data: "c", enabled: true },
+    ]);
+  });
 
-  it('returns enabled ideas', function () {
-    const enabled = new Shuffled(['a', 'c'])
-    this.ideas.ideas().should.be.deep.equal(enabled)
-  })
-})
+  it("returns enabled ideas", function () {
+    const enabled = new Shuffled(["a", "c"]);
+    this.ideas.ideas().should.be.deep.equal(enabled);
+  });
+});

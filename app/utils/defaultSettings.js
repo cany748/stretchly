@@ -1,6 +1,6 @@
-const defaultBreakIdeas = require('./defaultBreakIdeas')
-const defaultMicrobreakIdeas = require('./defaultMicrobreakIdeas')
-const Utils = require('./utils')
+const defaultBreakIdeas = require("./defaultBreakIdeas");
+const defaultMicrobreakIdeas = require("./defaultMicrobreakIdeas");
+const Utils = require("./utils");
 
 module.exports = {
   microbreakDuration: 20000,
@@ -24,12 +24,12 @@ module.exports = {
   microbreakPostponableDurationPercent: 30,
   breakPostponesLimit: 1,
   breakPostponableDurationPercent: 30,
-  mainColor: '#478484',
-  miniBreakColor: '#478484',
+  mainColor: "#478484",
+  miniBreakColor: "#478484",
   transparentMode: false,
   opacity: 0.9,
-  audio: 'crystal-glass',
-  miniBreakAudio: 'crystal-glass',
+  audio: "crystal-glass",
+  miniBreakAudio: "crystal-glass",
   volume: 1,
   fullscreen: false,
   ideas: true,
@@ -37,7 +37,7 @@ module.exports = {
   naturalBreaksInactivityResetTime: 300000,
   allScreens: true,
   useIdeasFromSettings: false,
-  language: 'en',
+  language: "en",
   notifyNewVersion: !Utils.insideFlatpak(),
   isFirstRun: true,
   posLatitude: 0.0,
@@ -48,8 +48,8 @@ module.exports = {
   monitorDnd: true,
   microbreakStartSoundPlaying: false,
   breakStartSoundPlaying: false,
-  themeSource: 'system',
-  endBreakShortcut: 'CmdOrCtrl+X',
+  themeSource: "system",
+  endBreakShortcut: "CmdOrCtrl+X",
   breakWindowWidth: 0.85,
   breakWindowHeight: 0.85,
   checkNewVersion: !Utils.insideFlatpak(),
@@ -59,13 +59,13 @@ module.exports = {
   appExclusions: [],
   appExclusionsCheckInterval: 1000,
   pauseForSuspendOrLock: true,
-  pauseBreaksToggleShortcut: '',
-  screen: 'primary',
+  pauseBreaksToggleShortcut: "",
+  screen: "primary",
   timeToBreakInTray: false,
   currentTimeInBreaks: false,
   showTrayIcon: true,
-  skipToNextScheduledBreakShortcut: '',
-  skipToNextMiniBreakShortcut: '',
-  skipToNextLongBreakShortcut: '',
-  resetBreaksShortcut: ''
-}
+  skipToNextScheduledBreakShortcut: "",
+  skipToNextMiniBreakShortcut: "",
+  skipToNextLongBreakShortcut: "",
+  resetBreaksShortcut: "",
+};

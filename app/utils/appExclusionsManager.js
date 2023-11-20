@@ -1,80 +1,82 @@
-const EventEmitter = require('events')
-const log = require('electron-log/main')
-const psList = require('ps-list')
+const EventEmitter = require("events");
+const log = require("electron-log/main");
+const psList = require("ps-list");
 
 class AppExclusionsManager extends EventEmitter {
-  constructor (settings) {
-    super()
-    this.timer = null
-    this.appExclusion = settings.get('appExclusions').find(ex => ex.active)
-    this.appExclusionsCheckInterval = settings.get('appExclusionsCheckInterval')
-    this.reset()
+  constructor(settings) {
+    super();
+    this.timer = null;
+    this.appExclusion = settings.get("appExclusions").find((ex) => ex.active);
+    this.appExclusionsCheckInterval = settings.get("appExclusionsCheckInterval");
+    this.reset();
     if (this.appExclusion) {
-      this.start()
+      this.start();
     }
   }
 
-  reinitialize (settings) {
-    clearInterval(this.timer)
-    this.timer = null
-    this.appExclusion = settings.get('appExclusions').find(ex => ex.active)
-    this.appExclusionsCheckInterval = settings.get('appExclusionsCheckInterval')
-    this.reset()
+  reinitialize(settings) {
+    clearInterval(this.timer);
+    this.timer = null;
+    this.appExclusion = settings.get("appExclusions").find((ex) => ex.active);
+    this.appExclusionsCheckInterval = settings.get("appExclusionsCheckInterval");
+    this.reset();
     if (this.appExclusion) {
-      this.start()
+      this.start();
     }
   }
 
-  start () {
-    this._checkRunningExceptions()
-    log.info('Stretchly: starting App exclusions monitoring')
+  start() {
+    this._checkRunningExceptions();
+    log.info("Stretchly: starting App exclusions monitoring");
   }
 
-  reset () {
-    this.isOnAppExclusion = false
+  reset() {
+    this.isOnAppExclusion = false;
     if (this.appExclusion) {
-      this.isOnAppExclusion = this.appExclusion.rule === 'resume'
+      this.isOnAppExclusion = this.appExclusion.rule === "resume";
     }
   }
 
-  async _runningAppExclusion () {
-    const runningCommands = await psList()
-    const appExclusionCommands = this.appExclusion.commands
-    let foundAppExclusion = false
+  async _runningAppExclusion() {
+    const runningCommands = await psList();
+    const appExclusionCommands = this.appExclusion.commands;
+    let foundAppExclusion = false;
     for (const appExclusionCommand of appExclusionCommands) {
-      const found = runningCommands.find(el =>
-        (el.cmd && el.cmd.includes(appExclusionCommand)) ||
-          (el.name && el.name.includes(appExclusionCommand)))
+      const found = runningCommands.find(
+        (el) => (el.cmd && el.cmd.includes(appExclusionCommand)) || (el.name && el.name.includes(appExclusionCommand)),
+      );
       if (found) {
-        foundAppExclusion = appExclusionCommand
-        break
+        foundAppExclusion = appExclusionCommand;
+        break;
       }
     }
-    return foundAppExclusion
+    return foundAppExclusion;
   }
 
-  _checkRunningExceptions () {
+  _checkRunningExceptions() {
     this.timer = setInterval(async () => {
-      const appExclusion = await this._runningAppExclusion()
+      const appExclusion = await this._runningAppExclusion();
       if (!this.isOnAppExclusion && appExclusion) {
-        this.isOnAppExclusion = true
-        this.emit('appExclusionStarted', this.appExclusion.rule, appExclusion)
+        this.isOnAppExclusion = true;
+        this.emit("appExclusionStarted", this.appExclusion.rule, appExclusion);
       }
       if (this.isOnAppExclusion && !appExclusion) {
-        this.isOnAppExclusion = false
-        this.emit('appExclusionFinished', this.appExclusion.rule)
+        this.isOnAppExclusion = false;
+        this.emit("appExclusionFinished", this.appExclusion.rule);
       }
-    }, this.appExclusionsCheckInterval)
+    }, this.appExclusionsCheckInterval);
   }
 
-  get isSchedulerCleared () {
-    if (this.appExclusion === undefined) { return false }
-    if (this.appExclusion.rule === 'pause') {
-      return this.isOnAppExclusion
+  get isSchedulerCleared() {
+    if (this.appExclusion === undefined) {
+      return false;
+    }
+    if (this.appExclusion.rule === "pause") {
+      return this.isOnAppExclusion;
     } else {
-      return !this.isOnAppExclusion
+      return !this.isOnAppExclusion;
     }
   }
 }
 
-module.exports = AppExclusionsManager
+module.exports = AppExclusionsManager;

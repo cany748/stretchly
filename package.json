@@ -1,12 +1,27 @@
 {
   "name": "@cany748/stretchly",
   "version": "0.0.1",
+  "packageManager": "pnpm@8.10.5",
   "description": "The break time reminder app",
+  "author": "Alexander Chepurnoi <cany748@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cany748/stretchly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cany748/stretchly/issues"
+  },
+  "keywords": [
+    "Stretchly",
+    "break",
+    "time",
+    "reminder"
+  ],
   "main": "app/main.js",
   "engines": {
     "node": "^18.11.0 || ^20.9.0"
   },
-  "packageManager": "pnpm@8.10.5",
   "scripts": {
     "start": "electron ./app",
     "dev": "cross-env NODE_ENV=development electron ./app --trace-warnings --trace-deprecation --enable-logging --remote-debugging-port=9222",
@@ -19,21 +34,6 @@
     "lint": "eslint . --fix",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cany748/stretchly.git"
-  },
-  "keywords": [
-    "Stretchly",
-    "break",
-    "time",
-    "reminder"
-  ],
-  "author": "Alexander Chepurnoi <cany748@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cany748/stretchly/issues"
   },
   "build": {
     "appId": "net.hovancik.stretchly",
@@ -106,18 +106,6 @@
       "allowToChangeInstallationDirectory": true
     }
   },
-  "devDependencies": {
-    "@cany748/eslint-config": "^1.0.0",
-    "chai": "^4.3.10",
-    "chai-as-promised": "^7.1.1",
-    "cross-env": "^7.0.3",
-    "electron": "^27.1.0",
-    "electron-builder": "^24.6.4",
-    "mocha": "^10.2.0",
-    "rimraf": "^5.0.5",
-    "sinon": "^17.0.1",
-    "spectron": "^19.0.0"
-  },
   "dependencies": {
     "@electron/remote": "^2.1.0",
     "dbus-final": "github:Jelmerro/dbus-final",
@@ -131,6 +119,18 @@
     "ps-list": "7.2.0",
     "rtl-detect": "^1.1.2",
     "semver": "^7.5.4"
+  },
+  "devDependencies": {
+    "@cany748/eslint-config": "^1.0.0",
+    "chai": "^4.3.10",
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^7.0.3",
+    "electron": "^27.1.0",
+    "electron-builder": "^24.6.4",
+    "mocha": "^10.2.0",
+    "rimraf": "^5.0.5",
+    "sinon": "^17.0.1",
+    "spectron": "^19.0.0"
   },
   "eslintConfig": {
     "extends": "@cany748"

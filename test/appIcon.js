@@ -1,1146 +1,1146 @@
-const chai = require('chai')
-const AppIcon = require('../app/utils/appIcon')
+const chai = require("chai");
+const AppIcon = require("../app/utils/appIcon");
 
-chai.should()
+chai.should();
 
-describe('appIcon', function () {
-  it('trayIconFileName works for dark mode on macOS', function () {
+describe("appIcon", function () {
+  it("trayIconFileName works for dark mode on macOS", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacDark.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacDark.png");
+  });
 
-  it('trayIconFileName works for dark mode on macOS with time in tray', function () {
+  it("trayIconFileName works for dark mode on macOS with time in tray", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacDarkNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacDarkNumber2.png");
+  });
 
-  it('trayIconFileName works for dark mode on Linux', function () {
+  it("trayIconFileName works for dark mode on Linux", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayDark.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayDark.png");
+  });
 
-  it('trayIconFileName works for dark mode on Linux with time in tray', function () {
+  it("trayIconFileName works for dark mode on Linux with time in tray", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayDarkNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayDarkNumber2.png");
+  });
 
-  it('trayIconFileName works for dark mode on Windows', function () {
+  it("trayIconFileName works for dark mode on Windows", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayDark.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayDark.png");
+  });
 
-  it('trayIconFileName works for dark mode on Windows with time in tray', function () {
+  it("trayIconFileName works for dark mode on Windows with time in tray", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayDarkNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayDarkNumber2.png");
+  });
 
-  it('trayIconFileName works for paused dark mode on macOS', function () {
+  it("trayIconFileName works for paused dark mode on macOS", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacPausedDark.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacPausedDark.png");
+  });
 
-  it('trayIconFileName works for paused dark mode on macOS with time in tray', function () {
+  it("trayIconFileName works for paused dark mode on macOS with time in tray", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacPausedDark.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacPausedDark.png");
+  });
 
-  it('trayIconFileName works for paused dark mode on Linux', function () {
+  it("trayIconFileName works for paused dark mode on Linux", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayPausedDark.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayPausedDark.png");
+  });
 
-  it('trayIconFileName works for paused dark mode on Linux with time in tray', function () {
+  it("trayIconFileName works for paused dark mode on Linux with time in tray", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayPausedDark.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayPausedDark.png");
+  });
 
-  it('trayIconFileName works for paused dark mode on Windows', function () {
+  it("trayIconFileName works for paused dark mode on Windows", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayPausedDark.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayPausedDark.png");
+  });
 
-  it('trayIconFileName works for paused dark mode on Windows with time in tray', function () {
+  it("trayIconFileName works for paused dark mode on Windows with time in tray", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayPausedDark.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayPausedDark.png");
+  });
 
-  it('trayIconFileName works for light mode on macOS', function () {
+  it("trayIconFileName works for light mode on macOS", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMac.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMac.png");
+  });
 
-  it('trayIconFileName works for light mode on macOS with time in tray', function () {
+  it("trayIconFileName works for light mode on macOS with time in tray", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacNumber2.png");
+  });
 
-  it('trayIconFileName works for light mode on Linux', function () {
+  it("trayIconFileName works for light mode on Linux", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('tray.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("tray.png");
+  });
 
-  it('trayIconFileName works for light mode on Linux with number in tray', function () {
+  it("trayIconFileName works for light mode on Linux with number in tray", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayNumber2.png");
+  });
 
-  it('trayIconFileName works for light mode on Windows', function () {
+  it("trayIconFileName works for light mode on Windows", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('tray.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("tray.png");
+  });
 
-  it('trayIconFileName works for light mode on Windows with tray on', function () {
+  it("trayIconFileName works for light mode on Windows with tray on", function () {
     const params = {
       paused: false,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayNumber2.png");
+  });
 
-  it('trayIconFileName works for paused light mode on macOS', function () {
+  it("trayIconFileName works for paused light mode on macOS", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacPaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacPaused.png");
+  });
 
-  it('trayIconFileName works for paused light mode on macOS with time in tray', function () {
+  it("trayIconFileName works for paused light mode on macOS with time in tray", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacPaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacPaused.png");
+  });
 
-  it('trayIconFileName works for paused light mode on Linux', function () {
+  it("trayIconFileName works for paused light mode on Linux", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayPaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayPaused.png");
+  });
 
-  it('trayIconFileName works for paused light mode on Linux with time in tray', function () {
+  it("trayIconFileName works for paused light mode on Linux with time in tray", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayPaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayPaused.png");
+  });
 
-  it('trayIconFileName works for paused light mode on Windows', function () {
+  it("trayIconFileName works for paused light mode on Windows", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayPaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayPaused.png");
+  });
 
-  it('trayIconFileName works for paused light mode on Windows with time in tray', function () {
+  it("trayIconFileName works for paused light mode on Windows with time in tray", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: false,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayPaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayPaused.png");
+  });
 
-  it('trayIconFileName works for monochrome on macOS', function () {
+  it("trayIconFileName works for monochrome on macOS", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromeTemplate.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromeTemplate.png");
+  });
 
-  it('trayIconFileName works for monochrome on macOS with time in tray', function () {
+  it("trayIconFileName works for monochrome on macOS with time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromeNumber2Template.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromeNumber2Template.png");
+  });
 
-  it('trayIconFileName works for monochrome on Linux', function () {
+  it("trayIconFileName works for monochrome on Linux", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochrome.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochrome.png");
+  });
 
-  it('trayIconFileName works for monochrome on Linux with time in tray', function () {
+  it("trayIconFileName works for monochrome on Linux with time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeNumber2.png");
+  });
 
-  it('trayIconFileName works for monochrome on Windows', function () {
+  it("trayIconFileName works for monochrome on Windows", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochrome.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochrome.png");
+  });
 
-  it('trayIconFileName works for monochrome on Windows with time in tray', function () {
+  it("trayIconFileName works for monochrome on Windows with time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeNumber2.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on macOS', function () {
+  it("trayIconFileName works for paused monochrome on macOS", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromePausedTemplate.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromePausedTemplate.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on macOS with time in tray', function () {
+  it("trayIconFileName works for paused monochrome on macOS with time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromePausedTemplate.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromePausedTemplate.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on Linux', function () {
+  it("trayIconFileName works for paused monochrome on Linux", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromePaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromePaused.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on Linux with time in tray', function () {
+  it("trayIconFileName works for paused monochrome on Linux with time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromePaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromePaused.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on Windows', function () {
+  it("trayIconFileName works for paused monochrome on Windows", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromePaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromePaused.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on Windows with time in tray', function () {
+  it("trayIconFileName works for paused monochrome on Windows with time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromePaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromePaused.png");
+  });
 
-  it('trayIconFileName works for monochrome on macOS (with dark on)', function () {
+  it("trayIconFileName works for monochrome on macOS (with dark on)", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromeTemplate.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromeTemplate.png");
+  });
 
-  it('trayIconFileName works for monochrome on macOS (with dark on) and time in tray', function () {
+  it("trayIconFileName works for monochrome on macOS (with dark on) and time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromeNumber2Template.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromeNumber2Template.png");
+  });
 
-  it('trayIconFileName works for monochrome on Linux (with dark on)', function () {
+  it("trayIconFileName works for monochrome on Linux (with dark on)", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochrome.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochrome.png");
+  });
 
-  it('trayIconFileName works for monochrome on Linux (with dark on) and time in tray', function () {
+  it("trayIconFileName works for monochrome on Linux (with dark on) and time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeNumber2.png");
+  });
 
-  it('trayIconFileName works for monochrome on Windows (with dark on)', function () {
+  it("trayIconFileName works for monochrome on Windows (with dark on)", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochrome.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochrome.png");
+  });
 
-  it('trayIconFileName works for monochrome on Windows (with dark on) and time in tray', function () {
+  it("trayIconFileName works for monochrome on Windows (with dark on) and time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeNumber2.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on macOS (with dark on)', function () {
+  it("trayIconFileName works for paused monochrome on macOS (with dark on)", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromePausedTemplate.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromePausedTemplate.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on macOS (with dark on) and time in tray', function () {
+  it("trayIconFileName works for paused monochrome on macOS (with dark on) and time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromePausedTemplate.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromePausedTemplate.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on Linux (with dark on)', function () {
+  it("trayIconFileName works for paused monochrome on Linux (with dark on)", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromePaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromePaused.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on Linux (with dark on) and time in tray', function () {
+  it("trayIconFileName works for paused monochrome on Linux (with dark on) and time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromePaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromePaused.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on Windows (with dark on)', function () {
+  it("trayIconFileName works for paused monochrome on Windows (with dark on)", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromePaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromePaused.png");
+  });
 
-  it('trayIconFileName works for paused monochrome on Windows (with dark on) and time in tray', function () {
+  it("trayIconFileName works for paused monochrome on Windows (with dark on) and time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromePaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromePaused.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on macOS', function () {
+  it("trayIconFileName works for inverted monochrome on macOS", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromeTemplate.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromeTemplate.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on macOS and time in tray', function () {
+  it("trayIconFileName works for inverted monochrome on macOS and time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromeNumber2Template.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromeNumber2Template.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on Linux', function () {
+  it("trayIconFileName works for inverted monochrome on Linux", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInverted.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInverted.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on Linux with time in tray', function () {
+  it("trayIconFileName works for inverted monochrome on Linux with time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedNumber2.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on Windows', function () {
+  it("trayIconFileName works for inverted monochrome on Windows", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInverted.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInverted.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on Windows with time in tray', function () {
+  it("trayIconFileName works for inverted monochrome on Windows with time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedNumber2.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on macOS', function () {
+  it("trayIconFileName works for paused inverted monochrome on macOS", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromePausedTemplate.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromePausedTemplate.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on macOS with time in tray', function () {
+  it("trayIconFileName works for paused inverted monochrome on macOS with time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromePausedTemplate.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromePausedTemplate.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on Linux', function () {
+  it("trayIconFileName works for paused inverted monochrome on Linux", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedPaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedPaused.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on Linux with time in tray', function () {
+  it("trayIconFileName works for paused inverted monochrome on Linux with time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedPaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedPaused.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on Windows', function () {
+  it("trayIconFileName works for paused inverted monochrome on Windows", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedPaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedPaused.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on Windows with time in tray', function () {
+  it("trayIconFileName works for paused inverted monochrome on Windows with time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedPaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedPaused.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on macOS (with dark on)', function () {
+  it("trayIconFileName works for inverted monochrome on macOS (with dark on)", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromeTemplate.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromeTemplate.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on macOS (with dark on) and time in tray', function () {
+  it("trayIconFileName works for inverted monochrome on macOS (with dark on) and time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromeNumber2Template.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromeNumber2Template.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on Linux (with dark on)', function () {
+  it("trayIconFileName works for inverted monochrome on Linux (with dark on)", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInverted.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInverted.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on Linux (with dark on)', function () {
+  it("trayIconFileName works for inverted monochrome on Linux (with dark on)", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedNumber2.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on Windows (with dark on)', function () {
+  it("trayIconFileName works for inverted monochrome on Windows (with dark on)", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInverted.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInverted.png");
+  });
 
-  it('trayIconFileName works for inverted monochrome on Windows (with dark on) with time in tray', function () {
+  it("trayIconFileName works for inverted monochrome on Windows (with dark on) with time in tray", function () {
     const params = {
       paused: false,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedNumber2.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedNumber2.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on macOS (with dark on)', function () {
+  it("trayIconFileName works for paused inverted monochrome on macOS (with dark on)", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromePausedTemplate.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromePausedTemplate.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on macOS (with dark on) with time in tray', function () {
+  it("trayIconFileName works for paused inverted monochrome on macOS (with dark on) with time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'darwin',
+      platform: "darwin",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMacMonochromePausedTemplate.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMacMonochromePausedTemplate.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on Linux (with dark on)', function () {
+  it("trayIconFileName works for paused inverted monochrome on Linux (with dark on)", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedPaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedPaused.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on Linux (with dark on) with time in tray', function () {
+  it("trayIconFileName works for paused inverted monochrome on Linux (with dark on) with time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'linux',
+      platform: "linux",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedPaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedPaused.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on Windows (with dark on)', function () {
+  it("trayIconFileName works for paused inverted monochrome on Windows (with dark on)", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedPaused.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedPaused.png");
+  });
 
-  it('trayIconFileName works for paused inverted monochrome on Windows (with dark on) with time in tray', function () {
+  it("trayIconFileName works for paused inverted monochrome on Windows (with dark on) with time in tray", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: true,
       timeToBreak: 2,
-      reference: 'startMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.trayIconFileName.should.equal('trayMonochromeInvertedPaused.png')
-  })
+      reference: "startMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.trayIconFileName.should.equal("trayMonochromeInvertedPaused.png");
+  });
 
-  it('windowIconFileName works for dark', function () {
+  it("windowIconFileName works for dark", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: true,
       darkMode: true,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.windowIconFileName.should.equal('trayDark.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.windowIconFileName.should.equal("trayDark.png");
+  });
 
-  it('windowIconFileName works for light', function () {
+  it("windowIconFileName works for light", function () {
     const params = {
       paused: true,
       monochrome: false,
       inverted: true,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.windowIconFileName.should.equal('tray.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.windowIconFileName.should.equal("tray.png");
+  });
 
-  it('windowIconFileName works for monochrome', function () {
+  it("windowIconFileName works for monochrome", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: false,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.windowIconFileName.should.equal('trayMonochrome.png')
-  })
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.windowIconFileName.should.equal("trayMonochrome.png");
+  });
 
-  it('windowIconFileName works for monochrome', function () {
+  it("windowIconFileName works for monochrome", function () {
     const params = {
       paused: true,
       monochrome: true,
       inverted: true,
       darkMode: false,
-      platform: 'win32',
+      platform: "win32",
       timeToBreakInTray: false,
       timeToBreak: 2,
-      reference: 'finishMicrobreak'
-    }
-    const appIcon = new AppIcon(params)
-    appIcon.windowIconFileName.should.equal('trayMonochromeInverted.png')
-  })
-})
+      reference: "finishMicrobreak",
+    };
+    const appIcon = new AppIcon(params);
+    appIcon.windowIconFileName.should.equal("trayMonochromeInverted.png");
+  });
+});

@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <title data-i18next="contributorPreferences.title"></title>
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/color-scheme.css">
-    <link rel="stylesheet" type="text/css" href="css/commons.css">
-    <link rel="stylesheet" type="text/css" href="css/contributor.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/color-scheme.css" />
+    <link rel="stylesheet" type="text/css" href="css/commons.css" />
+    <link rel="stylesheet" type="text/css" href="css/contributor.css" />
   </head>
   <body>
     <div class="contributor-preferences">
@@ -20,7 +20,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.beforeMiniBreak" data-same-width-label for="beforeMiniBreak"></label>
-        <input type="range" min="5" max="120" step="5" list="tickmarksBeforeMiniBreak" name="microbreakNotificationInterval" data-divisor="1000" id="beforeMiniBreak">
+        <input
+          type="range"
+          min="5"
+          max="120"
+          step="5"
+          list="tickmarksBeforeMiniBreak"
+          name="microbreakNotificationInterval"
+          data-divisor="1000"
+          id="beforeMiniBreak"
+        />
         <datalist id="tickmarksBeforeMiniBreak">
           <option value="5"></option>
           <option value="10"></option>
@@ -51,7 +60,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.beforeLongBreak" data-same-width-label for="beforeLongBreak"></label>
-        <input type="range" min="5" max="120" step="5" list="tickmarksBeforeLongBreak" name="breakNotificationInterval" data-divisor="1000" id="beforeLongBreak">
+        <input
+          type="range"
+          min="5"
+          max="120"
+          step="5"
+          list="tickmarksBeforeLongBreak"
+          name="breakNotificationInterval"
+          data-divisor="1000"
+          id="beforeLongBreak"
+        />
         <datalist id="tickmarksBeforeLongBreak">
           <option value="5"></option>
           <option value="10"></option>
@@ -81,7 +99,7 @@
         <output data-unit="seconds"></output>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.breakPostpone"></span>
@@ -94,7 +112,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.postponableFor" data-same-width-label for="miniBreakPostponableDurationPercent"></label>
-        <input type="range" min="5" max="100" step="5" list="tickmarksMiniBreakPostponableDurationPercent" name="microbreakPostponableDurationPercent" data-divisor="1" id="miniBreakPostponableDurationPercent">
+        <input
+          type="range"
+          min="5"
+          max="100"
+          step="5"
+          list="tickmarksMiniBreakPostponableDurationPercent"
+          name="microbreakPostponableDurationPercent"
+          data-divisor="1"
+          id="miniBreakPostponableDurationPercent"
+        />
         <datalist id="tickmarksMiniBreakPostponableDurationPercent">
           <option value="5"></option>
           <option value="10"></option>
@@ -121,7 +148,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.postponeFor" data-same-width-label for="miniBreakPostponeTime"></label>
-        <input type="range" min="1" max="10" step="1" list="tickmarksMiniBreakPostponeTime" name="microbreakPostponeTime" data-divisor="60000" id="miniBreakPostponeTime">
+        <input
+          type="range"
+          min="1"
+          max="10"
+          step="1"
+          list="tickmarksMiniBreakPostponeTime"
+          name="microbreakPostponeTime"
+          data-divisor="60000"
+          id="miniBreakPostponeTime"
+        />
         <datalist id="tickmarksMiniBreakPostponeTime">
           <option value="1"></option>
           <option value="2"></option>
@@ -138,7 +174,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.maxPostpones" data-same-width-label for="miniBreakPostponesLimit"></label>
-        <input type="range" min="1" max="5" step="1" list="tickmarksMiniBreakPostponesLimit" name="breakPostponesLimit" data-divisor="60000" id="miniBreakPostponesLimit">
+        <input
+          type="range"
+          min="1"
+          max="5"
+          step="1"
+          list="tickmarksMiniBreakPostponesLimit"
+          name="breakPostponesLimit"
+          data-divisor="60000"
+          id="miniBreakPostponesLimit"
+        />
         <datalist id="tickmarksMiniBreakPostponesLimit">
           <option value="1"></option>
           <option value="2"></option>
@@ -153,7 +198,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.postponableFor" data-same-width-label for="longBreakPostponableDurationPercent"></label>
-        <input type="range" min="5" max="100" step="5" list="tickmarksLongBreakPostponableDurationPercent" name="breakPostponableDurationPercent" data-divisor="1" id="longBreakPostponableDurationPercent">
+        <input
+          type="range"
+          min="5"
+          max="100"
+          step="5"
+          list="tickmarksLongBreakPostponableDurationPercent"
+          name="breakPostponableDurationPercent"
+          data-divisor="1"
+          id="longBreakPostponableDurationPercent"
+        />
         <datalist id="tickmarksLongBreakPostponableDurationPercent">
           <option value="5"></option>
           <option value="10"></option>
@@ -180,7 +234,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.postponeFor" data-same-width-label for="longBreakPostponeTime"></label>
-        <input type="range" min="1" max="10" step="1" list="tickmarksLongBreakPostponeTime" name="breakPostponeTime" data-divisor="60000" id="longBreakPostponeTime">
+        <input
+          type="range"
+          min="1"
+          max="10"
+          step="1"
+          list="tickmarksLongBreakPostponeTime"
+          name="breakPostponeTime"
+          data-divisor="60000"
+          id="longBreakPostponeTime"
+        />
         <datalist id="tickmarksLongBreakPostponeTime">
           <option value="1"></option>
           <option value="2"></option>
@@ -197,7 +260,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.maxPostpones" data-same-width-label for="longBreakPostponesLimit"></label>
-        <input type="range" min="1" max="5" step="1" list="tickmarksLongBreakPostponesLimit" name="breakPostponesLimit" data-divisor="60000" id="longBreakPostponesLimit">
+        <input
+          type="range"
+          min="1"
+          max="5"
+          step="1"
+          list="tickmarksLongBreakPostponesLimit"
+          name="breakPostponesLimit"
+          data-divisor="60000"
+          id="longBreakPostponesLimit"
+        />
         <datalist id="tickmarksLongBreakPostponesLimit">
           <option value="1"></option>
           <option value="2"></option>
@@ -208,7 +280,7 @@
         <output data-unit="none"></output>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.naturalBreaks"></span>
@@ -218,7 +290,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.pauseAfter" data-same-width-label for="pauseAfter"></label>
-        <input type="range" min="1" max="10" step="1" list="tickmarksPauseAfter" name="naturalBreaksInactivityResetTime" data-divisor="60000" id="pauseAfter">
+        <input
+          type="range"
+          min="1"
+          max="10"
+          step="1"
+          list="tickmarksPauseAfter"
+          name="naturalBreaksInactivityResetTime"
+          data-divisor="60000"
+          id="pauseAfter"
+        />
         <datalist id="tickmarksPauseAfter">
           <option value="1"></option>
           <option value="2"></option>
@@ -234,7 +315,7 @@
         <output data-unit="minutes"></output>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.pauseUntilMoring"></span>
@@ -244,7 +325,7 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.pauseUntil" data-same-width-label for="pauseUntil"></label>
-        <input type="range" min="3" max="10" step="1" list="tickmarksPauseUntil" name="morningHour" data-divisor="1" id="pauseUntil">
+        <input type="range" min="3" max="10" step="1" list="tickmarksPauseUntil" name="morningHour" data-divisor="1" id="pauseUntil" />
         <datalist id="tickmarksPauseUntil">
           <option value="3"></option>
           <option value="4"></option>
@@ -258,7 +339,7 @@
         <output data-unit="oclock"></output>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.opacityTheme"></span>
@@ -268,7 +349,7 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.opacity" data-same-width-label for="opacity"></label>
-        <input type="range" min="5" max="100" step="5" list="tickmarksOpacity" name="opacity" data-divisor="0.01" id="opacity">
+        <input type="range" min="5" max="100" step="5" list="tickmarksOpacity" name="opacity" data-divisor="0.01" id="opacity" />
         <datalist id="tickmarksOpacity">
           <option value="5"></option>
           <option value="10"></option>
@@ -294,7 +375,7 @@
         <output data-unit="percent"></output>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.breakWindowSize"></span>
@@ -304,7 +385,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.breakWindowWidth" data-same-width-label for="breakWindowWidth"></label>
-        <input type="range" min="40" max="99" step="1" list="tickmarksBreakWindowWidth" name="breakWindowWidth" data-divisor="0.01" id="breakWindowWidth">
+        <input
+          type="range"
+          min="40"
+          max="99"
+          step="1"
+          list="tickmarksBreakWindowWidth"
+          name="breakWindowWidth"
+          data-divisor="0.01"
+          id="breakWindowWidth"
+        />
         <datalist id="tickmarksBreakWindowWidth">
           <option value="40"></option>
           <option value="45"></option>
@@ -324,7 +414,16 @@
       </div>
       <div>
         <label data-i18next="contributorPreferences.breakWindowHeight" data-same-width-label for="breakWindowHeight"></label>
-        <input type="range" min="40" max="99" step="1" list="tickmarksBreakWindowHeight" name="breakWindowHeight" data-divisor="0.01" id="breakWindowHeight">
+        <input
+          type="range"
+          min="40"
+          max="99"
+          step="1"
+          list="tickmarksBreakWindowHeight"
+          name="breakWindowHeight"
+          data-divisor="0.01"
+          id="breakWindowHeight"
+        />
         <datalist id="tickmarksBreakWindowHeight">
           <option value="40"></option>
           <option value="45"></option>
@@ -343,22 +442,22 @@
         <output data-unit="percent"></output>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.sounds"></span>
       </div>
       <div>
-        <input type="checkbox" class="enabletype" value="microbreakStartSoundPlaying" id="miniBreakStartSound">
+        <input type="checkbox" class="enabletype" value="microbreakStartSoundPlaying" id="miniBreakStartSound" />
         <label data-i18next="contributorPreferences.miniBreakStartSound" for="miniBreakStartSound"></label>
       </div>
       <div>
-        <input type="checkbox" class="enabletype" value="breakStartSoundPlaying" id="longBreakStartSound">
+        <input type="checkbox" class="enabletype" value="breakStartSoundPlaying" id="longBreakStartSound" />
         <label data-i18next="contributorPreferences.longBreakStartSound" for="longBreakStartSound"></label>
       </div>
       <div>
         <label data-i18next="contributorPreferences.volume" data-same-width-label for="volume"></label>
-        <input type="range" min="5" max="100" step="5" list="tickmarksVolume" name="volume" data-divisor="0.01" id="volume">
+        <input type="range" min="5" max="100" step="5" list="tickmarksVolume" name="volume" data-divisor="0.01" id="volume" />
         <datalist id="tickmarksVolume">
           <option value="5"></option>
           <option value="10"></option>
@@ -384,7 +483,7 @@
         <output data-unit="percent"></output>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.customIdeas"></span>
@@ -393,28 +492,28 @@
         <p data-i18next="contributorPreferences.customIdeasInfo"></p>
       </div>
       <div>
-        <input type="checkbox" class="enabletype" value="useIdeasFromSettings" id="useIdeasFromSettings">
+        <input type="checkbox" class="enabletype" value="useIdeasFromSettings" id="useIdeasFromSettings" />
         <label data-i18next="contributorPreferences.useIdeasFromSettings" for="useIdeasFromSettings"></label>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.newVersion"></span>
       </div>
       <div>
-        <input type="checkbox" class="enabletype" value="notifyNewVersion" id="newVersionNotification">
+        <input type="checkbox" class="enabletype" value="notifyNewVersion" id="newVersionNotification" />
         <label data-i18next="contributorPreferences.newVersionNotification" for="newVersionNotification"></label>
       </div>
       <div>
         <span data-i18next="contributorPreferences.welcomeWindow"></span>
       </div>
       <div>
-        <input type="checkbox" class="enabletype" value="isFirstRun" id="showWelcomeWindow">
+        <input type="checkbox" class="enabletype" value="isFirstRun" id="showWelcomeWindow" />
         <label data-i18next="contributorPreferences.showWelcomeWindow" for="showWelcomeWindow"></label>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.showBreaksAsRegularWindowsTitle"></span>
@@ -423,29 +522,29 @@
         <p data-i18next="contributorPreferences.showBreaksAsRegularWindowsInfo"></p>
       </div>
       <div>
-        <input type="checkbox" class="enabletype" value="showBreaksAsRegularWindows" id="showBreaksAsRegularWindows">
+        <input type="checkbox" class="enabletype" value="showBreaksAsRegularWindows" id="showBreaksAsRegularWindows" />
         <label data-i18next="contributorPreferences.showBreaksAsRegularWindows" for="showBreaksAsRegularWindows"></label>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.appearance"></span>
       </div>
       <div>
-        <input type="radio" value="light" name="themeSource" id="light">
+        <input type="radio" value="light" name="themeSource" id="light" />
         <label data-i18next="contributorPreferences.light" for="light"></label>
       </div>
       <div>
-        <input type="radio" value="dark" name="themeSource" id="dark">
+        <input type="radio" value="dark" name="themeSource" id="dark" />
         <label data-i18next="contributorPreferences.dark" for="dark"></label>
       </div>
       <div>
-        <input type="radio" value="system" name="themeSource" id="system">
+        <input type="radio" value="system" name="themeSource" id="system" />
         <label data-i18next="contributorPreferences.system" for="system"></label>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.screen"></span>
@@ -457,38 +556,38 @@
         <label data-i18next="contributorPreferences.showOnMonitor" for="screen"></label>
         <div class="has-select">
           <select name="screen" id="screen">
-            <option value="primary"  data-i18next="contributorPreferences.primary"></option>
-            <option value="cursor"  data-i18next="contributorPreferences.cursor"></option>
-            <option value="0"  data-i18next="contributorPreferences.0"></option>
-            <option value="1"  data-i18next="contributorPreferences.1"></option>
-            <option value="2"  data-i18next="contributorPreferences.2"></option>
-            <option value="3"  data-i18next="contributorPreferences.3"></option>
-            <option value="4"  data-i18next="contributorPreferences.4"></option>
+            <option value="primary" data-i18next="contributorPreferences.primary"></option>
+            <option value="cursor" data-i18next="contributorPreferences.cursor"></option>
+            <option value="0" data-i18next="contributorPreferences.0"></option>
+            <option value="1" data-i18next="contributorPreferences.1"></option>
+            <option value="2" data-i18next="contributorPreferences.2"></option>
+            <option value="3" data-i18next="contributorPreferences.3"></option>
+            <option value="4" data-i18next="contributorPreferences.4"></option>
           </select>
         </div>
       </div>
       <div>
-        <hr>
+        <hr />
       </div>
       <div>
         <span data-i18next="contributorPreferences.timeToBreakInTray"></span>
       </div>
       <div>
-        <input type="checkbox" value="timeToBreakInTray" id="showTimeToBreakInTray">
+        <input type="checkbox" value="timeToBreakInTray" id="showTimeToBreakInTray" />
         <label data-i18next="contributorPreferences.showTimeToBreakInTray" for="showTimeToBreakInTray"></label>
       </div>
       <div>
         <span data-i18next="contributorPreferences.showTrayIcon"></span>
       </div>
       <div>
-        <input type="checkbox" value="showTrayIcon" id="toShowTrayIcon">
+        <input type="checkbox" value="showTrayIcon" id="toShowTrayIcon" />
         <label data-i18next="contributorPreferences.toShowTrayIcon" for="toShowTrayIcon"></label>
       </div>
       <div>
         <span data-i18next="contributorPreferences.currentTimeInBreaks"></span>
       </div>
       <div>
-        <input type="checkbox" value="currentTimeInBreaks" id="showCurrentTimeInBreaks">
+        <input type="checkbox" value="currentTimeInBreaks" id="showCurrentTimeInBreaks" />
         <label data-i18next="contributorPreferences.showCurrentTimeInBreaks" for="showCurrentTimeInBreaks"></label>
       </div>
     </div>

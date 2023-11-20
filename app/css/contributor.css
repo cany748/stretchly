@@ -27,7 +27,7 @@ body > div > :last-child {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(1) {
+body[dir="rtl"] .contributor-preferences > :nth-child(1) {
   text-align: left;
 }
 
@@ -38,7 +38,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(1) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(6) {
+body[dir="rtl"] .contributor-preferences > :nth-child(6) {
   text-align: left;
 }
 
@@ -49,7 +49,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(6) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(17) {
+body[dir="rtl"] .contributor-preferences > :nth-child(17) {
   text-align: left;
 }
 
@@ -60,7 +60,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(17) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(21) {
+body[dir="rtl"] .contributor-preferences > :nth-child(21) {
   text-align: left;
 }
 
@@ -71,7 +71,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(21) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(25) {
+body[dir="rtl"] .contributor-preferences > :nth-child(25) {
   text-align: left;
 }
 
@@ -82,7 +82,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(25) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(29) {
+body[dir="rtl"] .contributor-preferences > :nth-child(29) {
   text-align: left;
 }
 
@@ -93,7 +93,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(29) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(34) {
+body[dir="rtl"] .contributor-preferences > :nth-child(34) {
   text-align: left;
 }
 
@@ -104,7 +104,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(34) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(39) {
+body[dir="rtl"] .contributor-preferences > :nth-child(39) {
   text-align: left;
 }
 
@@ -115,7 +115,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(39) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(43) {
+body[dir="rtl"] .contributor-preferences > :nth-child(43) {
   text-align: left;
 }
 
@@ -126,7 +126,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(43) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(45) {
+body[dir="rtl"] .contributor-preferences > :nth-child(45) {
   text-align: left;
 }
 
@@ -137,7 +137,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(45) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(48) {
+body[dir="rtl"] .contributor-preferences > :nth-child(48) {
   text-align: left;
 }
 
@@ -148,7 +148,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(48) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(52) {
+body[dir="rtl"] .contributor-preferences > :nth-child(52) {
   text-align: left;
 }
 
@@ -159,7 +159,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(52) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(57) {
+body[dir="rtl"] .contributor-preferences > :nth-child(57) {
   text-align: left;
 }
 
@@ -170,7 +170,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(57) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(61) {
+body[dir="rtl"] .contributor-preferences > :nth-child(61) {
   text-align: left;
 }
 
@@ -181,7 +181,7 @@ body[dir=rtl] .contributor-preferences > :nth-child(61) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(63) {
+body[dir="rtl"] .contributor-preferences > :nth-child(63) {
   text-align: left;
 }
 
@@ -192,6 +192,6 @@ body[dir=rtl] .contributor-preferences > :nth-child(63) {
   text-align: right;
 }
 
-body[dir=rtl] .contributor-preferences > :nth-child(65) {
+body[dir="rtl"] .contributor-preferences > :nth-child(65) {
   text-align: left;
 }

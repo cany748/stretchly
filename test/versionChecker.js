@@ -1,49 +1,45 @@
-const expect = require('chai').expect
-const sinon = require('sinon')
-const VersionChecker = require('../app/utils/versionChecker')
+const expect = require("chai").expect;
+const sinon = require("sinon");
+const VersionChecker = require("../app/utils/versionChecker");
 
-describe('VersionChecker', () => {
-  describe('latest', () => {
-    let sandbox
+describe("VersionChecker", () => {
+  describe("latest", () => {
+    let sandbox;
 
     beforeEach(() => {
-      sandbox = sinon.createSandbox()
-    })
+      sandbox = sinon.createSandbox();
+    });
 
     afterEach(() => {
-      sandbox.restore()
-    })
+      sandbox.restore();
+    });
 
-    it('fetches tag name', (done) => {
-      const tagName = 'tag name'
-      const body = 'body'
-      sandbox.stub(JSON, 'parse').returns({ tag_name: tagName })
+    it("fetches tag name", (done) => {
+      const tagName = "tag name";
+      const body = "body";
+      sandbox.stub(JSON, "parse").returns({ tag_name: tagName });
       const response = {
-        text: sinon.stub().returns(Promise.resolve(body))
-      }
-      global.fetch = sinon.stub().returns(Promise.resolve(response))
+        text: sinon.stub().returns(Promise.resolve(body)),
+      };
+      global.fetch = sinon.stub().returns(Promise.resolve(response));
 
-      const checker = new VersionChecker()
+      const checker = new VersionChecker();
 
-      checker.latest()
-        .then((result) => {
-          expect(result).to.equal(tagName)
+      checker.latest().then((result) => {
+        expect(result).to.equal(tagName);
 
-          sinon.assert.calledWithExactly(
-            fetch,
-            'https://api.github.com/repos/hovancik/stretchly/releases/latest',
-            {
-              method: 'GET',
-              headers: { 'User-Agent': 'hovancik/stretchly' },
-              mode: 'cors',
-              cache: 'default'
-            })
+        sinon.assert.calledWithExactly(fetch, "https://api.github.com/repos/hovancik/stretchly/releases/latest", {
+          method: "GET",
+          headers: { "User-Agent": "hovancik/stretchly" },
+          mode: "cors",
+          cache: "default",
+        });
 
-          sinon.assert.called(response.text)
-          sinon.assert.calledWithExactly(JSON.parse, body)
+        sinon.assert.called(response.text);
+        sinon.assert.calledWithExactly(JSON.parse, body);
 
-          done()
-        })
-    })
-  })
-})
+        done();
+      });
+    });
+  });
+});

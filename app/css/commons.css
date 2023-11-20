@@ -1,156 +1,184 @@
 @font-face {
-  font-family: 'Noto Sans Light';
+  font-family: "Noto Sans Light";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local('Noto Sans Light'), local('NotoSans-Light'),
-       url('./fonts/NotoSans-Light.ttf') format('truetype');
+  src:
+    local("Noto Sans Light"),
+    local("NotoSans-Light"),
+    url("./fonts/NotoSans-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Noto Sans Regular';
+  font-family: "Noto Sans Regular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans Regular'), local('NotoSans-Regular'),
-       url('./fonts/NotoSans-Regular.ttf') format('truetype');
+  src:
+    local("Noto Sans Regular"),
+    local("NotoSans-Regular"),
+    url("./fonts/NotoSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Noto Sans Arabic Light';
+  font-family: "Noto Sans Arabic Light";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local('Noto Sans Arabic Light'), local('NotoSansArabic-Light'),
-       url('./fonts/NotoSansArabic-Light.ttf') format('truetype');
+  src:
+    local("Noto Sans Arabic Light"),
+    local("NotoSansArabic-Light"),
+    url("./fonts/NotoSansArabic-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Noto Sans Arabic Regular';
+  font-family: "Noto Sans Arabic Regular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans Arabic Regular'), local('NotoSansArabic-Regular'),
-       url('./fonts/NotoSansArabic-Regular.ttf') format('truetype');
+  src:
+    local("Noto Sans Arabic Regular"),
+    local("NotoSansArabic-Regular"),
+    url("./fonts/NotoSansArabic-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Noto Sans CJK KR Light';
+  font-family: "Noto Sans CJK KR Light";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local('Noto Sans CJK KR Light'), local('NotoSansCJKkr-Light'),
-       url('./fonts/NotoSansCJKkr-Light.otf') format('opentype');
+  src:
+    local("Noto Sans CJK KR Light"),
+    local("NotoSansCJKkr-Light"),
+    url("./fonts/NotoSansCJKkr-Light.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Noto Sans CJK KR Regular';
+  font-family: "Noto Sans CJK KR Regular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans CJK KR Regular'), local('NotoSansCJKkr-Regular'),
-       url('./fonts/NotoSansCJKkr-Regular.otf') format('opentype');
+  src:
+    local("Noto Sans CJK KR Regular"),
+    local("NotoSansCJKkr-Regular"),
+    url("./fonts/NotoSansCJKkr-Regular.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Noto Sans Devanagari Light';
+  font-family: "Noto Sans Devanagari Light";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local('Noto Sans Devanagari Light'), local('NotoSansDevanagari-Light'),
-       url('./fonts/NotoSansDevanagari-Light.ttf') format('opentype');
+  src:
+    local("Noto Sans Devanagari Light"),
+    local("NotoSansDevanagari-Light"),
+    url("./fonts/NotoSansDevanagari-Light.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Noto Sans Devanagari Regular';
+  font-family: "Noto Sans Devanagari Regular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans Devanagari Regular'), local('NotoSansDevanagari-Regular'),
-       url('./fonts/NotoSansDevanagari-Regular.ttf') format('truetype');
+  src:
+    local("Noto Sans Devanagari Regular"),
+    local("NotoSansDevanagari-Regular"),
+    url("./fonts/NotoSansDevanagari-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Noto Sans Gujarati Light';
+  font-family: "Noto Sans Gujarati Light";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local('Noto Sans Gujarati Light'), local('NotoSansGujarati-Light'),
-       url('./fonts/NotoSansGujarati-Regular.ttf') format('truetype');/* is missing */
+  src:
+    local("Noto Sans Gujarati Light"),
+    local("NotoSansGujarati-Light"),
+    url("./fonts/NotoSansGujarati-Regular.ttf") format("truetype"); /* is missing */
 }
 
 @font-face {
-  font-family: 'Noto Sans Gujarati Regular';
+  font-family: "Noto Sans Gujarati Regular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans Gujarati Regular'), local('NotoSansGujarati-Regular'),
-       url('./fonts/NotoSansGujarati-Regular.ttf') format('truetype');
+  src:
+    local("Noto Sans Gujarati Regular"),
+    local("NotoSansGujarati-Regular"),
+    url("./fonts/NotoSansGujarati-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Noto Sans Gurmukhi Light';
+  font-family: "Noto Sans Gurmukhi Light";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local('Noto Sans Gurmukhi Light'), local('NotoSansGurmukhi-Light'),
-       url('./fonts/NotoSansGurmukhi-Regular.ttf') format('truetype'); /* is missing */
+  src:
+    local("Noto Sans Gurmukhi Light"),
+    local("NotoSansGurmukhi-Light"),
+    url("./fonts/NotoSansGurmukhi-Regular.ttf") format("truetype"); /* is missing */
 }
 
 @font-face {
-  font-family: 'Noto Sans Gurmukhi Regular';
+  font-family: "Noto Sans Gurmukhi Regular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans Gurmukhi Regular'), local('NotoSansGurmukhi-Regular'),
-       url('./fonts/NotoSansGurmukhi-Regular.ttf') format('truetype');
+  src:
+    local("Noto Sans Gurmukhi Regular"),
+    local("NotoSansGurmukhi-Regular"),
+    url("./fonts/NotoSansGurmukhi-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Noto Sans Hebrew Light';
+  font-family: "Noto Sans Hebrew Light";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local('Noto Sans Hebrew Light'), local('NotoSansHebrew-Light'),
-       url('./fonts/NotoSansHebrew-Light.ttf') format('truetype');
+  src:
+    local("Noto Sans Hebrew Light"),
+    local("NotoSansHebrew-Light"),
+    url("./fonts/NotoSansHebrew-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Noto Sans Hebrew Regular';
+  font-family: "Noto Sans Hebrew Regular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans Hebrew Regular'), local('NotoSansHebrew-Regular'),
-       url('./fonts/NotoSansHebrew-Regular.ttf') format('truetype');
+  src:
+    local("Noto Sans Hebrew Regular"),
+    local("NotoSansHebrew-Regular"),
+    url("./fonts/NotoSansHebrew-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Noto Sans JP Light';
+  font-family: "Noto Sans JP Light";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local('Noto Sans JP Light'), local('NotoSansJP-Light'),
-       url('./fonts/NotoSansCJKjp-Light.otf') format('opentype');
+  src:
+    local("Noto Sans JP Light"),
+    local("NotoSansJP-Light"),
+    url("./fonts/NotoSansCJKjp-Light.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Noto Sans JP Regular';
+  font-family: "Noto Sans JP Regular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans JP Regular'), local('NotoSansJP-Regular'),
-       url('./fonts/NotoSansCJKjp-Regular.otf') format('opentype');
+  src:
+    local("Noto Sans JP Regular"),
+    local("NotoSansJP-Regular"),
+    url("./fonts/NotoSansCJKjp-Regular.otf") format("opentype");
 }
 
 body {
   background: var(--main-bg-color);
   color: var(--main-color);
-  font-family: 'Noto Sans Regular', 'Noto Sans Arabic Regular',
-    'Noto Sans CJK KR Regular',
-    'Noto Sans Devanagari Regular',
-    'Noto Sans Gujarati Regular', 'Noto Sans Gurmukhi Regular',
-    'Noto Sans Hebrew Regular',
-    'Noto Sans JP Regular';
+  font-family: "Noto Sans Regular", "Noto Sans Arabic Regular", "Noto Sans CJK KR Regular", "Noto Sans Devanagari Regular",
+    "Noto Sans Gujarati Regular", "Noto Sans Gurmukhi Regular", "Noto Sans Hebrew Regular", "Noto Sans JP Regular";
 }
 
 .darwin .darwin-hidden,
@@ -212,27 +240,28 @@ progress[value]::-webkit-progress-value {
   visibility: visible;
 }
 
-.tooltip.top .tiptext{
+.tooltip.top .tiptext {
   bottom: 150%;
   left: 50%;
   margin-left: -60px;
 }
 
-.tooltip.top .tiptext::after{
-  border-color: #2E2E2E transparent transparent transparent;
+.tooltip.top .tiptext::after {
+  border-color: #2e2e2e transparent transparent transparent;
   left: 50%;
   margin-left: -5px;
   top: 100%;
 }
 
 /* https://jsbin.com/itejak/1/edit?html,css,output */
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   display: none;
 }
 
 input[type="checkbox"] + label:before {
   background: var(--checkbox-bg);
-  border: 0 solid rgba(0,0,0,0.20);
+  border: 0 solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   box-shadow: var(--checkbox-shadow);
   content: "\00a0";
@@ -241,11 +270,11 @@ input[type="checkbox"] + label:before {
   height: 14px;
   line-height: 16px;
   margin: 0 4px 0 0;
-  padding:0;
+  padding: 0;
   width: 14px;
 }
 
-body[dir=rtl] input[type="checkbox"] + label:before {
+body[dir="rtl"] input[type="checkbox"] + label:before {
   margin: 0 0 0 4px;
 }
 
@@ -259,7 +288,7 @@ body[dir=rtl] input[type="checkbox"] + label:before {
 
 input[type="checkbox"]:checked + label:before {
   background: var(--checkbox-checked-bg);
-  color: #FFFFFF;
+  color: #ffffff;
   content: "\2714";
   text-align: center;
 }
@@ -270,7 +299,7 @@ input[type="checkbox"]:checked + label:before {
 
 input[type="radio"] + label:before {
   background: var(--checkbox-bg);
-  border: 0 solid rgba(0,0,0,0.20);
+  border: 0 solid rgba(0, 0, 0, 0.2);
   border-radius: 13px;
   box-shadow: var(--checkbox-shadow);
   content: "\00a0";
@@ -278,23 +307,23 @@ input[type="radio"] + label:before {
   font: 13px sans-serif;
   height: 16px;
   margin: 0 4px 0 0;
-  padding:0;
+  padding: 0;
   width: 16px;
 }
 
-body[dir=rtl] input[type="radio"] + label:before {
+body[dir="rtl"] input[type="radio"] + label:before {
   margin: 0 0 0 4px;
 }
 
 input[type="radio"]:checked + label:before {
   background: var(--checkbox-checked-bg);
-  color: #FFFFFF;
+  color: #ffffff;
   content: "\25CF";
   text-align: center;
 }
 
 input[type="radio"]:disabled + label {
-  color: rgba(255,255,255,0.99);
+  color: rgba(255, 255, 255, 0.99);
 }
 
 input[type="range"] {
@@ -303,7 +332,7 @@ input[type="range"] {
   width: 200px;
 }
 
-body[dir=rtl] input[type="range"] {
+body[dir="rtl"] input[type="range"] {
   margin: 0 13px 0 16px;
 }
 
@@ -315,13 +344,13 @@ body[dir=rtl] input[type="range"] {
   position: relative;
 }
 
-body[dir=rtl] .has-select {
+body[dir="rtl"] .has-select {
   margin-left: 0;
   margin-right: 4px;
 }
 
 .has-select::after {
-  color: #FFFFFF;
+  color: #ffffff;
   content: "⌄";
   pointer-events: none;
   position: absolute;
@@ -352,14 +381,14 @@ select {
   width: 100%;
 }
 
-body[dir=rtl] select {
+body[dir="rtl"] select {
   padding-left: 0;
   padding-right: 20px;
 }
 
 select option {
   color: var(--select-color);
-  background: var(--select-option-bg) ;
+  background: var(--select-option-bg);
 }
 
 select:focus {
@@ -368,7 +397,7 @@ select:focus {
 
 button {
   background: var(--button-bg-color);
-  border: 0 solid rgba(0,0,0,0.15);
+  border: 0 solid rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   box-shadow: var(--button-shadow);
   color: var(--button-color);
@@ -389,19 +418,19 @@ button:hover {
 button:active {
   background-image: linear-gradient(180deg, #84bffb 0%, #1a88ff 100%);
   border-radius: 3.5px;
-  box-shadow: 0 0 0 0 rgba(0,0,0,0.15);
-  color: #FFFFFF;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
+  color: #ffffff;
 }
 
 .push {
   background: var(--button-push-bg);
   border-radius: 3.5px;
   box-shadow: var(--button-push-shadow);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 hr {
   background: var(--hr-bg-color);
-  border: 0 solid rgba(0,0,0,0.20);
+  border: 0 solid rgba(0, 0, 0, 0.2);
   height: 2px;
 }
