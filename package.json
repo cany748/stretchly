@@ -4,8 +4,9 @@
   "description": "The break time reminder app",
   "main": "app/main.js",
   "engines": {
-    "node": "18.17.1"
+    "node": "^18.11.0 || ^20.9.0"
   },
+  "packageManager": "pnpm@8.10.5",
   "scripts": {
     "start": "electron ./app",
     "dev": "cross-env NODE_ENV=development electron ./app --trace-warnings --trace-deprecation --enable-logging --remote-debugging-port=9222",
@@ -106,6 +107,7 @@
     }
   },
   "devDependencies": {
+    "@cany748/eslint-config": "^1.0.0",
     "chai": "^4.3.10",
     "chai-as-promised": "^7.1.1",
     "cross-env": "^7.0.3",
@@ -117,7 +119,6 @@
     "spectron": "^19.0.0"
   },
   "dependencies": {
-    "@cany748/eslint-config": "^1.0.0",
     "@electron/remote": "^2.1.0",
     "dbus-final": "github:Jelmerro/dbus-final",
     "electron-log": "^5.0.0",
