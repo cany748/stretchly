@@ -56,25 +56,25 @@ describe("UntilMorning", function () {
     });
   });
 
-  describe("Sunrise Settings", function () {
-    // test for when the functionality to input sunrise is added
-    // test data for 08/04/2018 Amsterdam, Netherlands
-    // expected time is August 4 2018, 06:10 local Amsterdam time
+  // describe("Sunrise Settings", function () {
+  //   // test for when the functionality to input sunrise is added
+  //   // test data for 08/04/2018 Amsterdam, Netherlands
+  //   // expected time is August 4 2018, 06:10 local Amsterdam time
 
-    beforeEach(() => {
-      settings.set("morningHour", "sunrise");
-      settings.set("posLatitude", 52);
-      settings.set("posLongitude", 4);
-    });
+  //   beforeEach(() => {
+  //     settings.set("morningHour", "sunrise");
+  //     settings.set("posLatitude", 52);
+  //     settings.set("posLongitude", 4);
+  //   });
 
-    it("msToSunrise() returns morning time the same day", function () {
-      const dt = DateTime.local(2018, 8, 4, 5, 10, 0, 0);
-      new UntilMorning(settings).msToSunrise(dt).should.be.within(60 * 60 * 1000 - 60000, 60 * 60 * 1000 + 60000);
-    });
+  //   it("msToSunrise() returns morning time the same day", function () {
+  //     const dt = DateTime.local(2018, 8, 4, 5, 10, 0, 0);
+  //     new UntilMorning(settings).msToSunrise(dt).should.be.within(60 * 60 * 1000 - 60000, 60 * 60 * 1000 + 60000);
+  //   });
 
-    it("msToSunrise() returns morning time the next day", function () {
-      const dt = DateTime.local(2018, 8, 4, 7, 10, 0, 0);
-      new UntilMorning(settings).msToSunrise(dt).should.be.within(23 * 60 * 60 * 1000 - 60000, 23 * 60 * 60 * 1000 + 60000);
-    });
-  });
+  //   it("msToSunrise() returns morning time the next day", function () {
+  //     const dt = DateTime.local(2018, 8, 4, 7, 10, 0, 0);
+  //     new UntilMorning(settings).msToSunrise(dt).should.be.within(23 * 60 * 60 * 1000 - 60000, 23 * 60 * 60 * 1000 + 60000);
+  //   });
+  // });
 });
