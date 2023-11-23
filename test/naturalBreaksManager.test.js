@@ -12,10 +12,20 @@ describe("naturalBreaksManager", function () {
   beforeEach(() => {
     settings = new Store({
       cwd: path.join(__dirname),
-      name: "test-settings",
+      name: "test-settings-naturalBreaksManager",
       defaults: require("../app/utils/defaultSettings"),
     });
     naturalBreaksManager = new NaturalBreaksManager(settings);
+  });
+
+  afterEach(() => {
+    naturalBreaksManager.stop();
+    naturalBreaksManager = null;
+
+    if (settings) {
+      require("fs").unlink(path.join(__dirname, "/test-settings-naturalBreaksManager.json"), (_) => {});
+      settings = null;
+    }
   });
 
   it("should be running with default settings", () => {
@@ -58,15 +68,5 @@ describe("naturalBreaksManager", function () {
     naturalBreaksManager.isSchedulerCleared.should.be.equal(false);
     naturalBreaksManager.isOnNaturalBreak.should.be.equal(false);
     naturalBreaksManager.idleTime.should.be.equal(0);
-  });
-
-  afterEach(() => {
-    naturalBreaksManager.stop();
-    naturalBreaksManager = null;
-
-    if (settings) {
-      require("fs").unlink(path.join(__dirname, "/test-settings.json"), (_) => {});
-      settings = null;
-    }
   });
 });
