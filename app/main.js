@@ -744,12 +744,13 @@ function startMicrobreak() {
       frame: showBreaksAsRegularWindows,
       show: false,
       backgroundThrottling: false,
-      transparent: settings.get("transparentMode"),
-      backgroundColor: calculateBackgroundColor(settings.get("miniBreakColor")),
+      transparent: true,
+      backgroundColor: calculateBackgroundColor(settings.get('miniBreakColor')),
       skipTaskbar: !showBreaksAsRegularWindows,
       focusable: showBreaksAsRegularWindows,
       alwaysOnTop: !showBreaksAsRegularWindows,
-      title: "Stretchly",
+      hasShadow: false,
+      title: 'Stretchly',
       webPreferences: {
         preload: path.join(__dirname, "./microbreak.js"),
         enableRemoteModule: true,
@@ -769,9 +770,10 @@ function startMicrobreak() {
 
     let microbreakWinLocal = new BrowserWindow(windowOptions);
     // seems to help with multiple-displays problems
-    microbreakWinLocal.setSize(windowOptions.width, windowOptions.height);
-    ipcMain.on("send-microbreak-data", (event) => {
-      const startTime = Date.now();
+    microbreakWinLocal.setSize(windowOptions.width, windowOptions.height)
+
+    ipcMain.on('send-microbreak-data', (event) => {
+      const startTime = Date.now()
       if (!strictMode || postponable) {
         if (settings.get("endBreakShortcut") !== "") {
           globalShortcut.register(settings.get("endBreakShortcut"), () => {
@@ -891,12 +893,13 @@ function startBreak() {
       frame: showBreaksAsRegularWindows,
       show: false,
       backgroundThrottling: false,
-      transparent: settings.get("transparentMode"),
-      backgroundColor: calculateBackgroundColor(settings.get("mainColor")),
+      transparent: true,
+      backgroundColor: calculateBackgroundColor(settings.get('mainColor')),
       skipTaskbar: !showBreaksAsRegularWindows,
       focusable: showBreaksAsRegularWindows,
       alwaysOnTop: !showBreaksAsRegularWindows,
-      title: "Stretchly",
+      hasShadow: false,
+      title: 'Stretchly',
       webPreferences: {
         preload: path.join(__dirname, "./break.js"),
         enableRemoteModule: true,
@@ -1100,8 +1103,12 @@ function resetBreaks() {
   updateTray();
 }
 
-function calculateBackgroundColor(color) {
-  return color + Math.round(settings.get("opacity") * 255).toString(16);
+function calculateBackgroundColor (color) {
+  let opacityMultiplier = 1;
+  if (settings.get('transparentMode')) {
+    opacityMultiplier = settings.get('opacity');
+  }
+  return color + Math.round(opacityMultiplier * 255).toString(16)
 }
 
 function loadIdeas() {
